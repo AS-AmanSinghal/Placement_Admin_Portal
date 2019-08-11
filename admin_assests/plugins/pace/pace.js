@@ -921,7 +921,7 @@
   };
 
   if (typeof define === 'function' && define.amd) {
-    define(['admin_assests/plugins/pace/pace'], function() {
+    define(['pace'], function() {
       return Pace;
     });
   } else if (typeof exports === 'object') {

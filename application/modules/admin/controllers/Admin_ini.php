@@ -9,14 +9,14 @@ class Admin_ini extends MX_Controller {
     }
 
     public function admin_ini() {
-
-        if ($this->session->userdata('active_admin_id')) {
+        if (!$this->session->userdata('active_admin_id')) {
             redirect('admin/login');
         }
         $this->login_ini();
     }
 
     public function login_ini() {
+        
         if (!defined('ADMIN_ASSESTS'))
             define('ADMIN_ASSESTS', base_url() . 'admin_assests/');
 

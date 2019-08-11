@@ -56,7 +56,7 @@ module.exports = {
   	},
 
 	resolve: {
-		modulesDirectories: ["admin_assests"],
+		modulesDirectories: ["bower_components"],
 		alias: {
 			"eve": "eve-raphael/eve"
 		}

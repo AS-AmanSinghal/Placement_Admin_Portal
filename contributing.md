@@ -20,8 +20,8 @@ for us to maintain quality of the code-base.
 
 ### PHP Style
 
-All code must meet the [Style Guide](http://codeigniter.com/user_guide/general/styleguide.html), which is
-essentially the [Allman indent style](http://en.wikipedia.org/wiki/Indent_style#Allman_style), underscores and readable operators. This makes certain that all code is the same format as the existing code and means it will be as readable as possible.
+All code must meet the [Style Guide](https://codeigniter.com/user_guide/general/styleguide.html), which is
+essentially the [Allman indent style](https://en.wikipedia.org/wiki/Indent_style#Allman_style), underscores and readable operators. This makes certain that all code is the same format as the existing code and means it will be as readable as possible.
 
 ### Documentation
 
@@ -72,7 +72,7 @@ Hard way The best way to contribute is to "clone" your fork of CodeIgniter to yo
 2. Go to the CodeIgniter repo
 3. Fork it
 4. Clone your CodeIgniter repo: git@github.com:<your-name>/CodeIgniter.git
-5. Checkout the "develop" branch At this point you are ready to start making changes. 
+5. Checkout the "develop" branch At this point you are ready to start making changes.
 6. Fix existing bugs on the Issue tracker after taking a look to see nobody else is working on them.
 7. Commit the files
 8. Push your develop branch to your fork
