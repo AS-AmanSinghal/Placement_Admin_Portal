@@ -165,7 +165,7 @@ if ($result) {
                 <h3 class="box-title">Company List</h3><button class="btn btn-primary pull-right btn-xs add_company">Add Company</button>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body" style="overflow-x: scroll">
                 <div class="adv-table">
                     <table class="table table-striped table-responsive" style="overflow-x: scroll" id="company_table">
                         <thead>
@@ -173,7 +173,7 @@ if ($result) {
                                 <th>Id</th>
                                 <th>Company Name</th>
                                 <th>Date of Drive</th>
-        <!--                        <th>Location</th>-->
+                                <th>Location</th>
                                 <th>Pay Package</th>
                                 <th>Action</th>
                             </tr>
