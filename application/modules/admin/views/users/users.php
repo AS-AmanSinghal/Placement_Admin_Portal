@@ -1,4 +1,4 @@
-<section clas s="content">
+<section class="content">
     <div class="box box-primary add_student_form" style="<?= ($result) ? "" : 'display:none' ?>">
         <div class="box-header with-border">
             <h3 class="box-title">Add Student</h3>
@@ -53,7 +53,8 @@
                     </div>
                     <div class="clearfix"></div>
                     <?php
-                    if (isset($result['educational']) && $result['educational']) {
+                    if (isset($result['educational']) && $result['educational'])
+                    {
                         $count = 0;
                         foreach ($result['educational'] as $educ) {
                             if ($count == 0) {
