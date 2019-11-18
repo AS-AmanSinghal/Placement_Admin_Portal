@@ -7,14 +7,30 @@ $user_management = $users = $invigilator = "";
 $company_management = $company = $up_company = $pre_company = "";
 if ($tab == "dashboard") {
     $dashboard = "active";
-}else if ($tab == "education") {
+}else if ($tab == "educations") {
     $education = "active";
-}else if($tab=='user management'){
+}else if($tab=='user management')
+{
     $user_management = "active";
     if ($page == "users") {
         $users = "active";
     } else if ($page == "invigilator") {
         $invigilator = "active";
+    }
+}else if($tab=="company_management")
+{
+    $company_management="active";
+    if($page=="company")
+    {
+        $company="active";
+    }
+    else if ($page=="previous_company")
+    {
+        $pre_company="active";
+    }
+    else
+    {
+        $up_company="active";
     }
 }
 ?>

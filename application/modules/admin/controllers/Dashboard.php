@@ -21,6 +21,7 @@ class Dashboard extends MX_Controller {
         $view_data["tab"] = "dashboard";
         $view_data['result'] = $this->get_data();
         $data['page_data'] = $this->load->view('dashboard/dashboard', $view_data, TRUE);
+        $data['page_title']="Dashboard";
         echo Modules::run(ADMIN_TEMPLATE, $data);
     }
 

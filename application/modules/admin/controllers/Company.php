@@ -12,13 +12,14 @@ class Company extends MX_Controller {
 
     public function index() {
         $view_data['result'] = $this->Company_model->index();
-        $view_data['tab'] = "company management";
+        $view_data['tab'] = "company_management";
         $view_data['page'] = "company";
         $view_data['company'] = $this->Company_model->get_company();
 
         $this->load->model("Users_model");
         $view_data['education'] = $this->Users_model->get_education();
         $data['page_data'] = $this->load->view('company/company', $view_data, TRUE);
+        $data['page_title']="Company";
         echo Modules::run(ADMIN_TEMPLATE, $data);
     }
 
@@ -28,10 +29,11 @@ class Company extends MX_Controller {
 
     public function previous() {
         $view_data['result'] = $this->Company_model->index();
-        $view_data['tab'] = "company management";
-        $view_data['page'] = "previous company";
+        $view_data['tab'] = "company_management";
+        $view_data['page'] = "previous_company";
         $view_data['company'] = $this->Company_model->get_company();
         $data['page_data'] = $this->load->view('company/previously_visited_company', $view_data, TRUE);
+        $data['page_title']="Previous Company";
         echo Modules::run(ADMIN_TEMPLATE, $data);
     }
 
@@ -41,10 +43,11 @@ class Company extends MX_Controller {
 
     public function upcoming() {
         $view_data['result'] = $this->Company_model->index();
-        $view_data['tab'] = "company management";
-        $view_data['page'] = "upcoming company";
+        $view_data['tab'] = "company_management";
+        $view_data['page'] = "upcoming_company";
         $view_data['company'] = $this->Company_model->get_company();
         $data['page_data'] = $this->load->view('company/upcoming_company', $view_data, TRUE);
+        $data['page_title']="Upcoming Company";
         echo Modules::run(ADMIN_TEMPLATE, $data);
     }
 
