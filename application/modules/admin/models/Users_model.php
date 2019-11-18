@@ -11,17 +11,13 @@ class Users_model extends CI_Model {
         return $this->db->get('educations')->result_array();
     }
 
-    function get_educational_detail() {
-        
-    }
-
     function index($type)
     {
         $input = $this->input->post();
-        if (isset($_GET["id"]) && $_GET["id"]) {
-            $this->db->where('id', $_GET["id"]);
+        if (isset($_GET["id"]) && $_GET["id"])
+        {
+            $this->db->where('id', $_GET["id"]) ;
             $return['users'] = $this->db->get("users")->row_array();
-
             $this->db->select('ued.*,edu.title as edu_title');
             $this->db->where('user_id', $_GET["id"]);
             $this->db->where('ued.status', 1);
@@ -50,15 +46,15 @@ class Users_model extends CI_Model {
                     }
                     $this->db->where("id", $input["id"]);
                     $this->db->update("users", $user_info);
-                    pre($input);die;
-                    foreach ($input['education_id'] as $key => $value) {
+//                    pre($input);die;
+                    foreach ($input['education_id'] as $key => $value)
+                    {
                         $sub = array(
                             'education_id' => $input['education_id'][$key],
                             'marks' => $input['marks'][$key],
                             'max_marks' => $input['max_marks'][$key],
                             'roll_no' => $input['roll_no'][$key]
                         );
-
                         $this->db->where('id', $input['edu_ids'][$key]);
                         $this->db->update("user_educational_detail", $sub);
                     }
